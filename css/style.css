@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/*********************** CSS Reset e Configurações ***********************/
+html * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Otomanopee One", sans-serif;
+  background-color: #3d2f1e;
+}
+
+/*********************** Cabeçalho ***********************/
+#cabecalho {
+  background-color: #3d2f1e;
+  background-image: url(../img/top-bar.png);
+  background-repeat: repeat-x;
+  height: 28px;
+
+  text-align: center;
+  color: aliceblue;
+}
+
+/*********************** Conteúdo Principal ***********************/
+#box-conteudo {
+  background-image: url(../img/bk-1.jpg);
+  height: 850px;
+  text-align: center;
+}
+
+h1 {
+  padding-top: 57px;
+  padding-bottom: 37px;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 0 0 #3e2300, -3px 0 0 #3e2300, 0 3px 0 #3e2300,
+    0 -3px 0 #3e2300, 2px 2px #3e2300, -2px -2px 0 #3e2300, 2px -2px 0 #3e2300,
+    -1px 1px 0 #3e2300;
+}
+
+h1::after {
+  content: "";
+  border-bottom: 3px solid #b16005;
+  width: 25vw;
+  display: block;
+  margin: 0 auto;
+}
+
+#box-formulario {
+  padding: 0% 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#formulario fieldset {
+  width: 400px;
+  height: 600px;
+  background-color: #f7d89a;
+  border-radius: 3px;
+  border-color: #b60505;
+  color: #3e2300;
+}
+
+legend {
+  font-size: 30px;
+}
+
+#input-box {
+  margin-top: 30px;
+  padding: auto 50px;
+  position: relative;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 3%;
+  width: 100%;
+  color: #505050;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border: solid 1.7px transparent;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: inset 7px 7px 6px #bdbdbd73;
+
+  transition: all 0.5s ease-in-out;
+}
+
+input:hover {
+  border-color: #b60505;
+}
+
+input:focus {
+  transform: scale(1.03);
+  border-color: #b60505;
+}
+
+#termos-aceitos {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  width: 150px;
+  height: 60px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: url(../img/button.png);
+  background-repeat: no-repeat;
+  background-size: 150px 60px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: url(../img/button-hover.png);
+  background-size: 150px 61px;
+}
+
+#conectarCom {
+  font-size: 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#conectarCom img {
+  background-color: #fff;
+  border-radius: 2px;
+  height: 18px;
+  margin-left: 5px;
+  margin-right: 1px;
+
+  cursor: pointer;
+}
+
+.dica {
+  background-color: #f3d293;
+  border: 24px solid transparent;
+  border-image: url(../img/dica.png);
+  border-image-slice: 30;
+
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  width: 250px;
+
+  position: absolute;
+  right: 410px;
+  display: none;
+  z-index: 200;
+}
+
+@keyframes dicas {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+input:focus + .usuario {
+  display: block;
+  top: -30px;
+
+  animation: dicas 450ms ease-in-out;
+}
+
+input:focus + .senha {
+  display: block;
+  top: 85px;
+
+  animation: dicas 450ms ease-in-out;
+}
+
+input:focus + .email {
+  display: block;
+  top: 230px;
+
+  animation: dicas 450ms ease-in-out;
+}
+
+/*********************** Rodapé ***********************/
+#rodape {
+  text-align: center;
+  color: #fff;
+  height: 100px;
+  background-color: #3d2f1e;
+  position: relative;
+}
+
+#rodape h3 {
+  font-size: 14px;
+  font-weight: 100;
+  padding-top: 25px;
+}
+
+#box-icons {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+}
+
+#box-icons img {
+  height: 45px;
+}
+
+#box-icons img:not(#inst) {
+  filter: grayscale(100%);
+}
